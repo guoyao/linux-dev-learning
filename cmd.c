@@ -6,6 +6,9 @@ main(int argc, char* argv[]) {
     int pid;
     printf("Now only one process\n");
     printf("Calling fork… \n");
+    printf("argument count: %d\n", argc);
+    printf("first argument is: %s\n", argv[0]);
+    printf("last argument is: %s\n", argv[argc - 1]);
     pid = fork();
     if (!pid) {
         char* arguments[argc - 1];
